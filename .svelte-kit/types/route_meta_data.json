@@ -1,0 +1,30 @@
+{
+	"/": [
+		"src/routes/+layout.ts",
+		"src/routes/+layout.ts"
+	],
+	"/about": [
+		"src/routes/+layout.ts"
+	],
+	"/chat": [
+		"src/routes/+layout.ts"
+	],
+	"/consult": [
+		"src/routes/+layout.ts"
+	],
+	"/contact": [
+		"src/routes/+layout.ts"
+	],
+	"/insights": [
+		"src/routes/+layout.ts"
+	],
+	"/insights/[slug]": [
+		"src/routes/+layout.ts"
+	],
+	"/policy-builder": [
+		"src/routes/+layout.ts"
+	],
+	"/pricing": [
+		"src/routes/+layout.ts"
+	]
+}

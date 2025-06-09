@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #262626;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold leading-tight;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 md:px-8 max-w-7xl mx-auto;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center rounded-2xl py-3 px-6 font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-500 text-white hover:bg-primary-600 focus:ring-primary-500 shadow-glow;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-secondary-800 border border-secondary-200 hover:bg-secondary-50 focus:ring-secondary-500;
+  }
+  
+  .btn-accent {
+    @apply bg-accent-500 text-white hover:bg-accent-600 focus:ring-accent-500;
+  }
+  
+  .btn-lg {
+    @apply py-4 px-8 text-lg;
+  }
+  
+  .card {
+    @apply bg-white/70 backdrop-blur-sm rounded-2xl shadow-soft border border-white/20 p-6 transition-all duration-200;
+  }
+  
+  .card-hover {
+    @apply hover:shadow-hover hover:border-primary-100;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-sm border border-white/20 rounded-2xl;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 animate-gradient;
+  }
+}
+
+.nav-link {
+  @apply relative font-medium text-secondary-600 hover:text-primary-500 transition-colors duration-200;
+}
+
+.nav-link.active {
+  @apply text-primary-500;
+}
+
+.nav-link.active::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-full h-0.5 bg-primary-500 rounded-full;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mesh-gradient {
+  background-color: hsla(0, 0%, 100%, 1);
+  background-image:
+    radial-gradient(at 40% 20%, hsla(24, 100%, 50%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsla(35, 100%, 54%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(24, 100%, 50%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(35, 100%, 54%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(24, 100%, 50%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(35, 100%, 54%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(24, 100%, 50%, 0.1) 0px, transparent 50%);
+}
